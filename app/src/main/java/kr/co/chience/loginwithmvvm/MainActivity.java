@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import es.dmoral.toasty.Toasty;
 import kr.co.chience.loginwithmvvm.Interface.LoginResultCallbacks;
@@ -27,11 +28,11 @@ public class MainActivity extends AppCompatActivity implements LoginResultCallba
 
     @Override
     public void onSuccess(String message) {
-        Toasty.success(this, message, Toasty.LENGTH_SHORT);
+        Toasty.success(this, message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onError(String message) {
-        Toasty.error(this, message, Toasty.LENGTH_SHORT);
+        Toasty.error(this, message, Toast.LENGTH_SHORT).show();
     }
 }

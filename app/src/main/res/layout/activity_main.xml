@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Email"
                 android:padding="8dp"
-                app:addTextChangedListener="@{viewmodel.emailTextWatcher}" />
+                app:addTextChangedListener="@{viewmodel.getEmailTextWatcher}" />
 
             <EditText
                 android:id="@+id/edt_password"
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:padding="8dp"
-                app:addTextChangedListener="@{viewmodel.passwordTextWatcher}" />
+                app:addTextChangedListener="@{viewmodel.getPasswordTextWatcher}" />
 
         </LinearLayout>
 
