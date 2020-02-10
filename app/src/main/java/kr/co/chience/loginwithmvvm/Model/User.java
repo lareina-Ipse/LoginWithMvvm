@@ -38,15 +38,12 @@ public class User extends BaseObservable {
     }
 
     public int isValidData() {
-        if (!TextUtils.isEmpty(getEmail())) {
+        if (TextUtils.isEmpty(getEmail()) | TextUtils.isEmpty(getPassword())) {
             return 0;
-        } else if (getEmail() == null | getPassword() == null) {
-            return 3;
         } else if (!Patterns.EMAIL_ADDRESS.matcher(getEmail()).matches()) {
             return 1;
         } else if (getPassword().length() < 6) {
             return 2;
-
         } else {
             return -1;
         }
